@@ -1,0 +1,34 @@
+{
+  "name": "pokechess",
+  "version": "1.0.0",
+  "description": "Pokemon Chess",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roeintheglasses/pokeChess.git"
+  },
+  "keywords": [
+    "chess",
+    "pokechess"
+  ],
+  "author": "Hrishi Jangir",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/roeintheglasses/pokeChess/issues"
+  },
+  "homepage": "https://github.com/roeintheglasses/pokeChess#readme",
+  "dependencies": {
+    "bchess": "^1.0.8",
+    "bulma": "^0.9.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "node-chess": "^1.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

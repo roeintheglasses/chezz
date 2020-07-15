@@ -1,4 +1,4 @@
-<section class="hero is-black is-fullheight">
+<section class="hero is-light is-bold is-fullheight">
     <!-- Hero head: will stick at the top -->
     <!-- <div class="hero-head">
         <nav class="navbar">
@@ -29,129 +29,37 @@
     <!-- Hero content: will be in the middle -->
     <div class="hero-body">
         <div class="container has-text-centered">
-            <div class="box">
-                <div class="columns">
-                    <div class="column is-2"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-2"></div>
+            <div class="columns">
+                <div class="column is-4"></div>
+                <div class="column is-4">
+                    <label>Status:</label>
+                    <div id="status" class="title is-5 has-text-black"></div>
+                    <div id="chessboard" style="width: 100%"></div>
+
+                    <div style="margin: auto"">
+                        <!-- Shows the player number and color -->
+                          <div class=" player"></div>
+                    <div id="roomNumbers">Enter a room number between 0 and 99</div>
+                    <form>
+                        <div class="columns">
+                            <div class="column">
+                                <input type="number" id="room" min="0" max="99"
+                                    class="form-control form-control-md number">
+                            </div>
+                            <div class="column">
+                                <!-- A button that connects the user to the given valid room number -->
+                                <button id="button" class="button is-primary" onclick="connect()">Connect</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Displays weather the game is in progress, or over -->
+                    <div id="state">Join Game</div>
                 </div>
-                <div class="columns">
-                    <div class="column is-2"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-2"></div>
-                </div>
-                <div class="columns">
-                    <div class="column is-2"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-2"></div>
-                </div>
-                <div class="columns">
-                    <div class="column is-2"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-2"></div>
-                </div>
-                <div class="columns">
-                    <div class="column is-2"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-2"></div>
-                </div>
-                <div class="columns">
-                    <div class="column is-2"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-2"></div>
-                </div>
-                <div class="columns">
-                    <div class="column is-2"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-2"></div>
-                </div>
-                <div class="columns">
-                    <div class="column is-2"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-1 has-background-black"></div>
-                    <div class="column is-1 has-background-light"></div>
-                    <div class="column is-2"></div>
-                </div>
+            </div>
+            <div class="column is-4">
             </div>
         </div>
     </div>
-
-    <!-- Hero footer: will stick at the bottom -->
-    <!-- <div class="hero-foot">
-        <nav class="tabs is-boxed is-fullwidth">
-            <div class="container">
-                <ul>
-                    <li class="is-active">
-                        <a>Home</a>
-                    </li>
-                    <li>
-                        <a>Tutorial</a>
-                    </li>
-                    <li>
-                        <a>Avatars</a>
-                    </li>
-                    <li>
-                        <a>Icons</a>
-                    </li>
-                    <!-- <li>
-                        <a>About</a>
-                    </li> -->
-    </ul>
     </div>
-    </nav>
-    </div> -->
 </section>

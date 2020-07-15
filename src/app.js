@@ -30,9 +30,6 @@ for (let i = 0; i < 100; i++) {
     games[i] = { players: 0, pid: [0, 0] };
 }
 
-
-
-
 // Express & ejs Setup
 app.use(express.static(publicDirectoryPath));
 app.use(expressLayouts);
@@ -45,6 +42,7 @@ app.use(express.urlencoded({
 
 //Routes
 app.get('/', (req, res) => {
+    res.header("Set-Cookie", "HttpOnly;Secure;SameSite=Strict");
     res.render('index')
 });
 app.get('/full', (req, res) => {

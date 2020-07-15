@@ -1,19 +1,19 @@
-<section class="hero is-light is-bold is-fullheight">
+<section class="hero is-info is-medium">
     <!-- Hero head: will stick at the top -->
-    <!-- <div class="hero-head">
+    <div class="hero-head">
         <nav class="navbar">
             <div class="container">
                 <div class="navbar-brand">
                     <a class="navbar-item" href="/">
                         <h1 class="title">
-                            <i class="fas fa-skull"></i>
+                            <i class="fas fa-chess-rook"></i>
                         </h1>
                     </a>
                 </div>
                 <div id="navbarMenuHeroA" class="navbar-menu">
                     <div class="navbar-end">
                         <span class="navbar-item">
-                            <a class="button is-dark is-inverted">
+                            <a class="button is-info is-inverted">
                                 <span class="icon">
                                     <i class="fab fa-github"></i>
                                 </span>
@@ -24,40 +24,50 @@
                 </div>
             </div>
         </nav>
-    </div> -->
+    </div>
 
     <!-- Hero content: will be in the middle -->
     <div class="hero-body">
         <div class="container has-text-centered">
+            <p class="title is-1">PokeChess</p>
+            <p class="subtitle is-5">The OP Chess Game.</p>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-light">
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+        <div class="container has-text-centered">
             <div class="columns">
-                <div class="column is-4"></div>
                 <div class="column is-4">
-                    <label>Status:</label>
-                    <div id="status" class="title is-5 has-text-black"></div>
-                    <div id="chessboard" style="width: 100%"></div>
-
-                    <div style="margin: auto"">
-                        <!-- Shows the player number and color -->
-                          <div class=" player"></div>
-                    <div id="roomNumbers">Enter a room number between 0 and 99</div>
-                    <form>
-                        <div class="columns">
-                            <div class="column">
-                                <input type="number" id="room" min="0" max="99"
-                                    class="form-control form-control-md number">
-                            </div>
-                            <div class="column">
-                                <!-- A button that connects the user to the given valid room number -->
-                                <button id="button" class="button is-primary" onclick="connect()">Connect</button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- Displays weather the game is in progress, or over -->
-                    <div id="state">Join Game</div>
+                    <figure class="image is-512x512">
+                        <img src="/img/pokechess.png" alt="pokechess" />
+                    </figure>
                 </div>
-            </div>
-            <div class="column is-4">
+                <div class="column is-1"></div>
+                <div class="column">
+                    <div class=" player"></div>
+                    <div id="roomNumbers" class="subtitle is-4"></div>
+                    <div id="state" class="subtitle is-6"></div>
+                    <div id="chessboard" style="width: 100%"></div>
+                    <div class="box" id="roomForm">
+                        <form>
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input is-info is-fullwidth" type="text"
+                                        placeholder="Join room between 0 and 99" type="number" id="room" min="0"
+                                        max="99">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <button id="button" class="button is-info" onclick="connect()">Join Room</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
